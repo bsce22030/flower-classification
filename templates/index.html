@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Classifier</title>
+</head>
+<body>
+    <h1>Flower Classifier</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Upload Image</button>
+    </form>
+
+    {% if result_image %}
+        <h3>Predicted Flower: {{ flower_name }}</h3>
+        <img src="{{ result_image }}" alt="Processed Image">
+    {% endif %}
+</body>
+</html>
